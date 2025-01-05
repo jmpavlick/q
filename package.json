@@ -1,0 +1,17 @@
+{
+  "name": "q",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "elm-test-rs",
+    "test:watch": "elm-test-rs --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.12.0",
+  "dependencies": {
+    "elm-tooling": "^1.15.1"
+  }
+}
