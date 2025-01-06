@@ -1,15 +1,20 @@
 {
     "type": "package",
     "name": "jmpavlick/q",
-    "summary": "Deeply-nested optional-property record access for the real world.",
+    "summary": "Deeply-nested optional-property record accessor combinators for the real world.",
     "license": "BSD-3-Clause",
     "version": "1.0.0",
+    "exposed-modules": [
+        "A",
+        "Q",
+        "S"
+    ],
     "elm-version": "0.19.0 <= v < 0.20.0",
-    "exposed-modules": [],
     "dependencies": {
         "elm/core": "1.0.0 <= v < 2.0.0"
     },
     "test-dependencies": {
-        "elm-explorations/test": "2.0.0 <= v < 3.0.0"
+        "elm-explorations/test": "2.0.0 <= v < 3.0.0",
+        "elm/time": "1.0.0 <= v < 2.0.0"
     }
 }

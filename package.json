@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preview": "elm-doc-preview",
+    "start": "run-pty % bash % pnpm test:watch % pnpm preview",
     "test": "elm-test-rs",
     "test:watch": "elm-test-rs --watch"
   },
@@ -12,6 +14,8 @@
   "license": "ISC",
   "packageManager": "pnpm@9.12.0",
   "dependencies": {
-    "elm-tooling": "^1.15.1"
+    "elm-doc-preview": "^6.0.1",
+    "elm-tooling": "^1.15.1",
+    "run-pty": "^5.0.0"
   }
 }
