@@ -8,27 +8,27 @@ But what if you don't _want_ to _operate_ on them, per se? What if you have some
 
 Consider the following scenario: You have a JSON object, and it looks like _this_:
 
-```ts
+```json
 {
-  user: {
-    settings: {
-      notifications: {
-        activity: {
-          likes: true,
-          follows: true,
-          retweets: {
-            fromFollowers: true,
-            fromFollowing: true,
-            fromEveryone: {
-              includingMuted: true
+  "user": {
+    "settings": {
+      "notifications": {
+        "activity": {
+          "likes": true,
+          "follows": true,
+          "retweets": {
+            "fromFollowers": true,
+            "fromFollowing": true,
+            "fromEveryone": {
+              "includingMuted": true
             }
           }
         }  
       }
     },
-    profile: {
-      handle: "@lambdapriest",
-      homepage: "x.com/lambdapriest"
+    "profile": {
+      "handle": "@lambdapriest",
+      "homepage": "x.com/lambdapriest"
     }
   }
 }
