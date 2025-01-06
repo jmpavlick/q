@@ -101,7 +101,7 @@ nx = A.qq
 - An uppercase `A` to represent that the value being operated on is an "actual value" - i.e, not a `Maybe`
 - Two lowercase `q`s to represent the optional maps
 
-It's basically just syntactic sugar around `Maybe.andThen`; and unlike other cursed things that I hold near and dear to my heart, [@jfmengels](https://x.com/jfmengels) doesn't have an `elm-review` rule against it _yet_.
+It's basically just syntactic sugar around `Maybe.andThen`; and unlike other cursed things that I hold near and dear to my heart, [@jfmengels](https://github.com/jfmengels/) doesn't have an `elm-review` rule against it _yet_.
 
 ## What's the catch?
 
