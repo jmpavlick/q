@@ -4,7 +4,7 @@ module Q exposing
     , q6, q7, q8, q9, q10, q11
     )
 
-{-| Combinators for navigating deeply-hierarchial nested values with optional properties.
+{-| Combinators for navigating deeply-hierarchical nested values with optional properties.
 
 The `Q` module is specialized to operating on values that are a `Maybe a`.
 
@@ -45,7 +45,7 @@ The `Q` module is specialized to operating on values that are a `Maybe a`.
 import Maybe exposing (andThen)
 
 
-{-| lift an accessor function `a -> b` to a "q" (i.e., `a -> Maybe b`)
+{-| Lift an accessor function `a -> b` to a "q" (i.e., `a -> Maybe b`).
 
     name : Maybe String
     name =
@@ -62,7 +62,7 @@ j =
     (<<) Just
 
 
-{-| for when you need to scooch right past an error (becuase you can't dip it in ranch)
+{-| For when you need to scooch right past an error (because you can't dip it in ranch).
 
     toLastSignInSuccess : Int -> Maybe Time.Posix
     toLastSignInSuccess i =
@@ -75,7 +75,7 @@ ope =
     (<<) Result.toMaybe
 
 
-{-| for when you need to schooch right past a _success_
+{-| For when you need to scooch right past a _success_.
 
     -- Get the error message if sign in failed
     qq .profile (nope .signInHistory) user == Just "rate limited"
@@ -91,21 +91,21 @@ nope f a =
             Just x
 
 
-{-| it's literally just `Maybe.andThen`
+{-| It's literally just `Maybe.andThen`.
 -}
 q : (a -> Maybe b) -> Maybe a -> Maybe b
 q =
     andThen
 
 
-{-| apply two "and-then-able" functions in order to a `Maybe a`
+{-| Apply two "and-then-able" functions in order to a `Maybe a`.
 -}
 qq : (a -> Maybe b) -> (b -> Maybe c) -> Maybe a -> Maybe c
 qq a b =
     q b << q a
 
 
-{-| apply three "and-then-able" functions in order to a `Maybe a`
+{-| Apply three "and-then-able" functions in order to a `Maybe a`.
 -}
 qqq :
     (a -> Maybe b)
@@ -117,7 +117,7 @@ qqq a b c =
     q c << qq a b
 
 
-{-| apply four "and-then-able" functions in order to a `Maybe a`
+{-| Apply four "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqq :
     (a -> Maybe b)
@@ -130,7 +130,7 @@ qqqq f g h i =
     q i << qqq f g h
 
 
-{-| apply five "and-then-able" functions in order to a `Maybe a`
+{-| Apply five "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqq :
     (a -> Maybe b)
@@ -144,7 +144,7 @@ qqqqq a b c d e =
     q e << qqqq a b c d
 
 
-{-| apply six "and-then-able" functions in order to a `Maybe a`
+{-| Apply six "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqq :
     (a -> Maybe b)
@@ -159,7 +159,7 @@ qqqqqq a b c d e f =
     q f << qqqqq a b c d e
 
 
-{-| same as `qqqqqq`, just easier to read
+{-| Same as `qqqqqq`, just easier to read.
 -}
 q6 :
     (a -> Maybe b)
@@ -174,7 +174,7 @@ q6 =
     qqqqqq
 
 
-{-| apply seven "and-then-able" functions in order to a `Maybe a`
+{-| Apply seven "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqqq :
     (a -> Maybe b)
@@ -190,7 +190,7 @@ qqqqqqq a b c d e f g =
     q g << qqqqqq a b c d e f
 
 
-{-| same as `qqqqqqq`, just easier to read
+{-| Same as `qqqqqqq`, just easier to read.
 -}
 q7 :
     (a -> Maybe b)
@@ -206,7 +206,7 @@ q7 =
     qqqqqqq
 
 
-{-| apply eight "and-then-able" functions in order to a `Maybe a`
+{-| Apply eight "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqqqq :
     (a -> Maybe b)
@@ -223,7 +223,7 @@ qqqqqqqq a b c d e f g h =
     q h << qqqqqqq a b c d e f g
 
 
-{-| same as `qqqqqqqq`, just easier to read
+{-| Same as `qqqqqqqq`, just easier to read.
 -}
 q8 :
     (a -> Maybe b)
@@ -240,7 +240,7 @@ q8 =
     qqqqqqqq
 
 
-{-| apply nine "and-then-able" functions in order to a `Maybe a`
+{-| Apply nine "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqqqqq :
     (a -> Maybe b)
@@ -258,7 +258,7 @@ qqqqqqqqq a b c d e f g h i =
     q i << qqqqqqqq a b c d e f g h
 
 
-{-| same as `qqqqqqqqq`, just easier to read
+{-| Same as `qqqqqqqqq`, just easier to read.
 -}
 q9 :
     (a -> Maybe b)
@@ -276,7 +276,7 @@ q9 =
     qqqqqqqqq
 
 
-{-| apply ten "and-then-able" functions in order to a `Maybe a`
+{-| Apply ten "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqqqqqq :
     (a -> Maybe b)
@@ -295,7 +295,7 @@ qqqqqqqqqq a b c d e f g h i j_ =
     q j_ << qqqqqqqqq a b c d e f g h i
 
 
-{-| same as `qqqqqqqqqq`, just easier to read
+{-| Same as `qqqqqqqqqq`, just easier to read.
 -}
 q10 :
     (a -> Maybe b)
@@ -314,7 +314,7 @@ q10 =
     qqqqqqqqqq
 
 
-{-| apply eleven "and-then-able" functions in order to a `Maybe a`
+{-| Apply eleven "and-then-able" functions in order to a `Maybe a`.
 -}
 qqqqqqqqqqq :
     (a -> Maybe b)
@@ -334,7 +334,7 @@ qqqqqqqqqqq a b c d e f g h i j_ k =
     q k << qqqqqqqqqq a b c d e f g h i j_
 
 
-{-| same as `qqqqqqqqqqq`, just easier to read
+{-| Same as `qqqqqqqqqqq`, just easier to read.
 -}
 q11 :
     (a -> Maybe b)

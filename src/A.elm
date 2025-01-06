@@ -3,7 +3,7 @@ module A exposing
     , q6, q7, q8, q9, q10, q11
     )
 
-{-| Functions for navigating deeply-hierarchial nested values with optional properties.
+{-| Functions for navigating deeply-hierarchical nested values with optional properties.
 
 The `A` module is specialized to operating on values that are _not_ a `Maybe a`, but contain accessors that are "and-then-able".
 

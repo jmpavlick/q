@@ -30,14 +30,14 @@ scope - you can do that with `S`.
 -}
 
 
-{-| spread the same arg with 2 maps over a two-arg function.
+{-| Spread the same arg with 2 maps over a two-arg function.
 -}
 s2 : (b -> c -> d) -> (a -> b) -> (a -> c) -> a -> d
 s2 map2 toB toC a =
     map2 (toB a) (toC a)
 
 
-{-| spread the same arg with 3 maps over a three-arg function.
+{-| Spread the same arg with 3 maps over a three-arg function.
 -}
 s3 :
     (b -> c -> d -> e)
@@ -50,7 +50,7 @@ s3 map3 b c d a =
     map3 (b a) (c a) (d a)
 
 
-{-| spread the same arg with 4 maps over a four-arg function.
+{-| Spread the same arg with 4 maps over a four-arg function.
 -}
 s4 :
     (b -> c -> d -> e -> f)
@@ -64,7 +64,7 @@ s4 map4 toB toC toD toE a =
     map4 (toB a) (toC a) (toD a) (toE a)
 
 
-{-| spread the same arg with 5 maps over a five-arg function.
+{-| Spread the same arg with 5 maps over a five-arg function.
 -}
 s5 :
     (b -> c -> d -> e -> f -> g)
@@ -79,7 +79,7 @@ s5 map5 toB toC toD toE toF a =
     map5 (toB a) (toC a) (toD a) (toE a) (toF a)
 
 
-{-| spread the same arg with 6 maps over a six-arg function.
+{-| Spread the same arg with 6 maps over a six-arg function.
 -}
 s6 :
     (b -> c -> d -> e -> f -> g -> h)
@@ -95,7 +95,7 @@ s6 map6 toB toC toD toE toF toG a =
     map6 (toB a) (toC a) (toD a) (toE a) (toF a) (toG a)
 
 
-{-| spread the same arg with 7 maps over a seven-arg function.
+{-| Spread the same arg with 7 maps over a seven-arg function.
 -}
 s7 :
     (b -> c -> d -> e -> f -> g -> h -> i)
@@ -112,7 +112,7 @@ s7 map7 toB toC toD toE toF toG toH a =
     map7 (toB a) (toC a) (toD a) (toE a) (toF a) (toG a) (toH a)
 
 
-{-| spread the same arg with 8 maps over an eight-arg function.
+{-| Spread the same arg with 8 maps over an eight-arg function.
 -}
 s8 :
     (b -> c -> d -> e -> f -> g -> h -> i -> j)
@@ -130,7 +130,7 @@ s8 map8 toB toC toD toE toF toG toH toI a =
     map8 (toB a) (toC a) (toD a) (toE a) (toF a) (toG a) (toH a) (toI a)
 
 
-{-| spread the same arg with 9 maps over a nine-arg function.
+{-| Spread the same arg with 9 maps over a nine-arg function.
 -}
 s9 :
     (b -> c -> d -> e -> f -> g -> h -> i -> j -> k)
@@ -149,7 +149,7 @@ s9 map9 toB toC toD toE toF toG toH toI toJ a =
     map9 (toB a) (toC a) (toD a) (toE a) (toF a) (toG a) (toH a) (toI a) (toJ a)
 
 
-{-| spread the same arg with 10 maps over a ten-arg function.
+{-| Spread the same arg with 10 maps over a ten-arg function.
 -}
 s10 :
     (b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l)
@@ -169,7 +169,7 @@ s10 map10 toB toC toD toE toF toG toH toI toJ toK a =
     map10 (toB a) (toC a) (toD a) (toE a) (toF a) (toG a) (toH a) (toI a) (toJ a) (toK a)
 
 
-{-| spread the same arg with 11 maps over an eleven-arg function.
+{-| Spread the same arg with 11 maps over an eleven-arg function.
 -}
 s11 :
     (b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m)
