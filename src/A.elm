@@ -1,6 +1,6 @@
 module A exposing
     ( qq, qqq, qqqq, qqqqq, qqqqqq, qqqqqqq, qqqqqqqq, qqqqqqqqq, qqqqqqqqqq, qqqqqqqqqqq
-    , q6, q7, q8, q9, q10, q11
+    , q4, q5, q6, q7, q8, q9, q10, q11
     )
 
 {-| Functions for navigating deeply-hierarchical nested values with optional properties.
@@ -24,7 +24,7 @@ The `A` module is specialized to operating on values that are _not_ a `Maybe a`,
 
 @docs qq, qqq, qqqq, qqqqq, qqqqqq, qqqqqqq, qqqqqqqq, qqqqqqqqq, qqqqqqqqqq, qqqqqqqqqqq
 
-@docs q6, q7, q8, q9, q10, q11
+@docs q4, q5, q6, q7, q8, q9, q10, q11
 
 -}
 
@@ -63,6 +63,19 @@ qqqq a b c d =
     Q.qqq b c d << a
 
 
+{-| Same as `A.qqqq`, just easier to read.
+-}
+q4 :
+    (a -> Maybe b)
+    -> (b -> Maybe c)
+    -> (c -> Maybe d)
+    -> (d -> Maybe e)
+    -> a
+    -> Maybe e
+q4 =
+    qqqq
+
+
 {-| Apply five "and-then-able" functions in order to a value.
 -}
 qqqqq :
@@ -75,6 +88,20 @@ qqqqq :
     -> Maybe f
 qqqqq a b c d e =
     Q.qqqq b c d e << a
+
+
+{-| Same as `A.qqqqq`, just easier to read.
+-}
+q5 :
+    (a -> Maybe b)
+    -> (b -> Maybe c)
+    -> (c -> Maybe d)
+    -> (d -> Maybe e)
+    -> (e -> Maybe f)
+    -> a
+    -> Maybe f
+q5 =
+    qqqqq
 
 
 {-| Apply six "and-then-able" functions in order to a value.
@@ -92,7 +119,7 @@ qqqqqq a b c d e f =
     Q.qqqqq b c d e f << a
 
 
-{-| Same as `qqqqqq`, just easier to read.
+{-| Same as `A.qqqqqq`, just easier to read.
 -}
 q6 :
     (a -> Maybe b)
@@ -123,7 +150,7 @@ qqqqqqq a b c d e f g =
     Q.qqqqqq b c d e f g << a
 
 
-{-| Same as `qqqqqqq`, just easier to read.
+{-| Same as `A.qqqqqqq`, just easier to read.
 -}
 q7 :
     (a -> Maybe b)
@@ -156,7 +183,7 @@ qqqqqqqq a b c d e f g h =
     Q.qqqqqqq b c d e f g h << a
 
 
-{-| Same as `qqqqqqqq`, just easier to read.
+{-| Same as `A.qqqqqqqq`, just easier to read.
 -}
 q8 :
     (a -> Maybe b)
@@ -191,7 +218,7 @@ qqqqqqqqq a b c d e f g h i =
     Q.qqqqqqqq b c d e f g h i << a
 
 
-{-| Same as `qqqqqqqqq`, just easier to read.
+{-| Same as `A.qqqqqqqqq`, just easier to read.
 -}
 q9 :
     (a -> Maybe b)
@@ -228,7 +255,7 @@ qqqqqqqqqq a b c d e f g h i j =
     Q.qqqqqqqqq b c d e f g h i j << a
 
 
-{-| Same as `qqqqqqqqqq`, just easier to read.
+{-| Same as `A.qqqqqqqqqq`, just easier to read.
 -}
 q10 :
     (a -> Maybe b)
@@ -267,7 +294,7 @@ qqqqqqqqqqq a b c d e f g h i j k =
     Q.qqqqqqqqqq b c d e f g h i j k << a
 
 
-{-| Same as `qqqqqqqqqqq`, just easier to read.
+{-| Same as `A.qqqqqqqqqqq`, just easier to read.
 -}
 q11 :
     (a -> Maybe b)
