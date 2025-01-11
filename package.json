@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preview": "elm-doc-preview",
-    "start": "run-pty % bash % pnpm test:watch % pnpm preview",
+    "start": "run-pty % bash % pnpm test:watch % pnpm preview % elm-review --watch --fix-all",
     "test": "elm-test-rs",
     "test:watch": "elm-test-rs --watch"
   },
@@ -15,6 +15,7 @@
   "packageManager": "pnpm@9.12.0",
   "dependencies": {
     "elm-doc-preview": "^6.0.1",
+    "elm-review": "^2.12.0",
     "elm-tooling": "^1.15.1",
     "run-pty": "^5.0.0"
   }
